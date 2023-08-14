@@ -15,9 +15,9 @@ def main():
     print("doing some work!")
     start_time = time.time()
     
-    while time.time() - start_time < 27:
+    while time.time() - start_time < 40:
         print("Monitoring...")
-        time.sleep(1)  # Add a small delay to prevent excessive looping - check in
+        time.sleep(1)  # Add a small delay to prevent excessive looping - check in / Eni
     print("done...")
 
 if __name__ == "__main__":
