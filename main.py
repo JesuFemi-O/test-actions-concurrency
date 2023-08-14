@@ -12,6 +12,7 @@ signal.signal(signal.SIGTERM, handle_signal)
 signal.signal(signal.SIGINT, handle_signal)
 signal.signal(signal.SIGQUIT, handle_signal)
 signal.signal(signal.SIGHUP, handle_signal)
+signal.signal(signal.SIGKILL, handle_signal)
 
 def main():
     try:
