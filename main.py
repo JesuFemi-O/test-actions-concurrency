@@ -17,7 +17,7 @@ def main():
         print("doing some work!")
         start_time = time.time()
         
-        while time.time() - start_time < 40:
+        while time.time() - start_time < 100:
             print("Monitoring...")
             time.sleep(1)  # Add a small delay to prevent excessive looping - check in / Eni v2
         print("done...")
