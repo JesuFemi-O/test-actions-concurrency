@@ -10,15 +10,19 @@ def handle_signal(signum, frame):
 # Register the signal handler for SIGTERM
 signal.signal(signal.SIGTERM, handle_signal)
 signal.signal(signal.SIGINT, handle_signal)
+signal.signal(signal.SIGQUIT, handle_signal)
 
 def main():
-    print("doing some work!")
-    start_time = time.time()
-    
-    while time.time() - start_time < 40:
-        print("Monitoring...")
-        time.sleep(1)  # Add a small delay to prevent excessive looping - check in / Eni
-    print("done...")
+    try:
+        print("doing some work!")
+        start_time = time.time()
+        
+        while time.time() - start_time < 40:
+            print("Monitoring...")
+            time.sleep(1)  # Add a small delay to prevent excessive looping - check in / Eni
+        print("done...")
+    except Exception as e:
+        print("except block: {e}")
 
 if __name__ == "__main__":
     main()
