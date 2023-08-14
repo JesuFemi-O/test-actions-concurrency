@@ -1,4 +1,14 @@
 import time
+import signal
+import sys
+
+# Signal handler function
+def handle_signal(signum, frame):
+    print("Received signal:", signum)
+    sys.exit(1)
+
+# Register the signal handler for SIGTERM
+signal.signal(signal.SIGTERM, handle_signal)
 
 def main():
     print("Sleeping for 3 minutes...")
