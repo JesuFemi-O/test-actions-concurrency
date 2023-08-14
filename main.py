@@ -16,7 +16,7 @@ def main():
     start_time = time.time()
     while time.time() - start_time < 27:
         print("Monitoring...")
-        time.sleep(1)  # Add a small delay to prevent excessive looping
+        time.sleep(1)  # Add a small delay to prevent excessive looping - check
 
 if __name__ == "__main__":
     main()
