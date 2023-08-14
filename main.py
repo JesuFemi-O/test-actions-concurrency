@@ -21,7 +21,7 @@ def main():
         
         while time.time() - start_time < 100:
             print("Monitoring...")
-            time.sleep(1)  # Add a small delay to prevent excessive looping - check in / test exec...
+            time.sleep(1)  # Add a small delay to prevent excessive looping - check in / test exec...!
         print("done...")
     except Exception as e:
         print("except block: {e}")
