@@ -14,7 +14,7 @@ def main():
     print("doing some work!")
     start_time = time.time()
     # time.sleep(50)  # Sleep for 3 minutes (180 seconds) or get stopped
-    while time.time() - start_time < 5:
+    while time.time() - start_time < 25:
         print("Monitoring...")
         time.sleep(1)  # Add a small delay to prevent excessive looping
 
