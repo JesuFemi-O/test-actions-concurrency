@@ -11,9 +11,11 @@ def handle_signal(signum, frame):
 signal.signal(signal.SIGTERM, handle_signal)
 
 def main():
-    print("Sleeping for 3 minutes...")
-    time.sleep(50)  # Sleep for 3 minutes (180 seconds) or get stopped
-    print("Done sleeping!")
+    print("doing some work!")
+    start_time = time.time()
+    # time.sleep(50)  # Sleep for 3 minutes (180 seconds) or get stopped
+    while time.time() - start_time < 50:
+        print("Monitoring...")
 
 if __name__ == "__main__":
     main()
