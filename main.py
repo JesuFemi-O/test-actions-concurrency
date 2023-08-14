@@ -13,7 +13,7 @@ signal.signal(signal.SIGTERM, handle_signal)
 def main():
     print("doing some work!")
     start_time = time.time()
-    # time.sleep(50)  # Sleep for 3 minutes (180 seconds) or get stopped
+    # time.sleep(50)
     while time.time() - start_time < 50:
         print("Monitoring...")
 
