@@ -1,0 +1,26 @@
+name: run-ci-worklfow
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to your main branch name
+
+concurrency:
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  run_sleep_script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.10  # Choose the Python version you're using
+
+    - name: Run CI
+      run: python main.py
