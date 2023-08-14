@@ -1,0 +1,27 @@
+name: run-ci-worklfow
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:  # Enable manual triggering
+
+concurrency:
+  group: ${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  run_sleep_script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3.9
+
+    - name: Run CI
+      run: python main.py
