@@ -12,7 +12,7 @@ signal.signal(signal.SIGTERM, handle_signal)
 signal.signal(signal.SIGINT, handle_signal)
 signal.signal(signal.SIGQUIT, handle_signal)
 signal.signal(signal.SIGHUP, handle_signal)
-signal.signal(signal.SIGKILL, handle_signal)
+# signal.signal(signal.SIGKILL, handle_signal)
 
 def main():
     try:
@@ -21,7 +21,7 @@ def main():
         
         while time.time() - start_time < 100:
             print("Monitoring...")
-            time.sleep(1)  # Add a small delay to prevent excessive looping - check in / Eni v3 *crying**
+            time.sleep(1)  # Add a small delay to prevent excessive looping - check in / test exec...
         print("done...")
     except Exception as e:
         print("except block: {e}")
