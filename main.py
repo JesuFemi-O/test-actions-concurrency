@@ -12,7 +12,7 @@ signal.signal(signal.SIGTERM, handle_signal)
 
 def main():
     print("Sleeping for 3 minutes...")
-    time.sleep(180)  # Sleep for 3 minutes (180 seconds) or get stopped
+    time.sleep(50)  # Sleep for 3 minutes (180 seconds) or get stopped
     print("Done sleeping!")
 
 if __name__ == "__main__":
