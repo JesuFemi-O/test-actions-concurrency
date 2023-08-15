@@ -8,11 +8,9 @@ def handle_signal(signum, frame):
     sys.exit(1)
 
 # Register the signal handler for SIGTERM
-signal.signal(signal.SIGTERM, handle_signal)
+# https://github.com/orgs/community/discussions/26311#discussioncomment-6231898
 signal.signal(signal.SIGINT, handle_signal)
-signal.signal(signal.SIGQUIT, handle_signal)
-signal.signal(signal.SIGHUP, handle_signal)
-# signal.signal(signal.SIGKILL, handle_signal)
+signal.signal(signal.SIGTERM, handle_signal)
 
 def main():
     try:
