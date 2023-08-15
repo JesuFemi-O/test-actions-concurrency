@@ -24,4 +24,5 @@ jobs:
         python-version: 3.9
 
     - name: Run CI
-      run: python main.py
+      run: |
+        exec python3 main.py
