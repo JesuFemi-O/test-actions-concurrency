@@ -13,6 +13,7 @@ concurrency:
 jobs:
   run_sleep_script:
     runs-on: ubuntu-latest
+    if: "!(github.event.pull_request.draft) && !(contains(github.event.pull_request.title, 'DO NOT MERGE'))"
 
     steps:
     - name: Checkout code
